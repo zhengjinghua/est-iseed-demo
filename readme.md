@@ -29,7 +29,7 @@ You can refer to this [documentation](https://github.com/Aufree/laravel-packages
 1). Require this package in your composer.json and update composer. This will download the package
 
 ```
-composer require intervention/image
+composer require orangehill/iseed
 ```
 
 2). After updating composer, add the ServiceProvider to the providers array in `config/app.php`
