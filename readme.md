@@ -1,28 +1,101 @@
-## Laravel PHP Framework
+## For Chinese
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+[中文文档请点击这里](https://phphub.org/topics/1929)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Description
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+[iseed](https://github.com/orangehill/iseed) is a Laravel package that provides a method to generate a new seed file based on data from the existing database table.
 
-## Official Documentation
+## Screenshots
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+![](http://7xrxcg.com1.z0.glb.clouddn.com/c68ab3a16ae72dbecd344e81305d112d.png)
 
-## Contributing
+## Run the demo
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+You can refer to this [documentation](https://github.com/Aufree/laravel-packages-top100/blob/master/how-to-run-a-laravel-project.md) to know how to run this demo.
 
-## Security Vulnerabilities
+## Table of contents
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+1. Installation;
+2. Basic Usage;
+3. Recommend Usage;
+4. More Usage.
 
-### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
-# est-iseed-demo
+### Installation
+
+1). Require this package in your composer.json and update composer. This will download the package
+
+```
+composer require intervention/image
+```
+
+2). After updating composer, add the ServiceProvider to the providers array in `config/app.php`
+
+```php
+'providers' => [
+	...
+	Orangehill\Iseed\IseedServiceProvider::class,
+],
+```
+
+Done. Very simple, isn't it? :beers::beers::beers:
+
+### Basic Usage
+
+#### Export the specified tables
+
+Just run this command:
+
+```
+php artisan iseed users
+```
+
+It will be generate `UsersTableSeeder.php` file.
+
+You can also generate multiple seeder files at the same time, like:
+
+```
+php artisan iseed users,topics
+```
+it will be generate `UsersTableSeeder.php` and `TopicsTableSeeder.php` file.
+
+#### Overwrite existing seeds -- force
+
+Optional parameter which is used to automatically overwrite any existing seeds for desired tables.
+
+```shell
+php artisan iseed users --force
+```
+
+It will overwrite `UsersTableSeeder.php` file.
+
+The `UsersTableSeeder.php` content is:
+
+![](http://7xrxcg.com1.z0.glb.clouddn.com/f4147af61401615f9bd98e66c788a8be.png)
+
+#### Specifies the DB -- database
+
+Optional parameter which specifies the DB connection name:
+
+```shell
+php artisan iseed users --database=mysql2
+```
+
+### Recommend Usage
+
+I suggest everyone use this package like:
+I recommend everyone use the package in this way:
+
+1. Import production database into a developer's computer;
+2. The developer run `php artisan iseed ...` to generate the seeder files;
+3. Submit all seeder files to the version management, then others can download the seeder files.
+
+### More Usage
+
+You can refer to the [documentation](https://github.com/orangehill/iseed) to learn more about this package.
+
+---
+欢迎关注 `LaravelTips`, 一个专注于为 Laravel 开发者服务, 致力于帮助开发者更好的掌握 Laravel 框架, 提升开发效率的微信公众号.
+
+![](http://ww4.sinaimg.cn/large/76dc7f1bjw1f23moqj4qzj20by0bywfa.jpg)
