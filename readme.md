@@ -84,7 +84,6 @@ php artisan iseed users --database=mysql2
 
 ### Recommend Usage
 
-I suggest everyone use this package like:
 I recommend everyone use the package in this way:
 
 1. Import production database into a developer's computer;
