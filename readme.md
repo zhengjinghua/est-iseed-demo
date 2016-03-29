@@ -6,6 +6,8 @@
 
 [iseed](https://github.com/orangehill/iseed) is a Laravel package that provides a method to generate a new seed file based on data from the existing database table.
 
+> This project was created by [The EST Group](http://est-group.org/) and [PHPHub](https://phphub.org/topics/1929).
+
 ## Screenshots
 
 ![](http://7xrxcg.com1.z0.glb.clouddn.com/c68ab3a16ae72dbecd344e81305d112d.png)
