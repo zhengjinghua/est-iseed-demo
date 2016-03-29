@@ -84,7 +84,7 @@ php artisan iseed users --database=mysql2
 
 ### Recommend Usage
 
-I recommend everyone use the package in this way:
+I advise you to use the package pack this way.
 
 1. Import production database into a developer's computer;
 2. The developer run `php artisan iseed ...` to generate the seeder files;
